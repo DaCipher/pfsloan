@@ -6,6 +6,7 @@ use Manny\Manny;
 use Livewire\Component;
 use App\Models\Application;
 use App\Mail\AdminNotification;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Mail;
 
 class ApplicationForm extends Component
@@ -37,7 +38,9 @@ class ApplicationForm extends Component
         "loan_amount.min" => "Minimum loanable amount is $2,000.",
         "loan_amount.integer" => "Enter valid amount.",
         "dob.min" => "DOB must be in DD/MM/YYYY format.",
-        "ssn.min" => "SSN must be in 111-11-1111 format."
+        "ssn.min" => "SSN must be in 111-11-1111 format.",
+        "dob.before" => "You must be above 18years!",
+        "loan_duration.min" => "Minimum loan duration is 2 months."
     ];
     public function mount()
     {
@@ -59,18 +62,20 @@ class ApplicationForm extends Component
 
     public function validateData()
     {
+        $date = new Carbon();
+        $before = $date->subYears(18)->format('Y-m-d');
         if ($this->currentStep == 1) {
             $this->validate([
                 "loan_amount" => "required|integer|min:2000",
                 "loan_purpose" => "required|string|min:8",
-                "loan_duration" => "required|numeric"
+                "loan_duration" => "required|numeric|min:2"
             ]);
         } elseif ($this->currentStep == 2) {
             $this->validate([
                 "first_name" => "required|alpha:min:4",
                 "middle_name" => "nullable|alpha|min:4",
                 "last_name" => "required|alpha|min:4",
-                "dob" => "required|string|min:10",
+                "dob" => "required|string|min:10|before:$before",
                 "phone" => "required:min:10",
                 "email" => "required|email"
             ]);
@@ -91,9 +96,9 @@ class ApplicationForm extends Component
             $this->phone = Manny::mask($this->phone, "+1(111) 111-1111");
         }
 
-        if ($field == "dob") {
-            $this->dob = Manny::mask($this->dob, "11/11/1111");
-        }
+        // if ($field == "dob") {
+        //     $this->dob = Manny::mask($this->dob, "11/11/1111");
+        // }
 
         if ($field == "ssn") {
             $this->ssn = Manny::mask($this->ssn, "111-11-1111");
@@ -133,9 +138,10 @@ class ApplicationForm extends Component
 
             Application::create($inputDatas);
 
-            Mail::to('anonymousdaghost@gmail.com')
+            Mail::to('admin@primefinancialsolution.com')
                 ->send(new AdminNotification($inputDatas));
-            session()->flash('success', "ok");
+            session()->flash('success', "Application submitted!");
+            session()->flash('ok', "Done");
             return redirect("/loan/apply/success");
 
             $this->reset();

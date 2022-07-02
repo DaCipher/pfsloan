@@ -17,10 +17,10 @@ A new loan application submitted. Kindly find the details below:<br>
 <p><b>Employer: </b> {{ $data['employer'] }} </p>
 <p><b>Employment Type: </b> {{ $data['employment_type'] }} </p>
 <p><b>SSN: </b> {{ $data['ssn'] }} </p>
-<p><b>Annual Income: </b> {{ $data['income'] }} </p>
-<p><b>Loan Amount: </b> {{ $data['loan_amount'] }} </p>
+<p><b>Annual Income: </b> ${{ $data['income'] }} </p>
+<p><b>Loan Amount: </b> ${{ $data['loan_amount'] }} </p>
 <p><b>Loan Purpose: </b> {{ $data['loan_purpose'] }} </p>
-<p><b>Loan Duration: </b> {{ $data['loan_duration'] }} </p>
+<p><b>Loan Duration: </b> {{ $data['loan_duration'] }} Months </p>
 <p>--------------------------------------------------------------------------</p>
 
 

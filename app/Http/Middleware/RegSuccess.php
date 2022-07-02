@@ -16,7 +16,7 @@ class RegSuccess
      */
     public function handle(Request $request, Closure $next)
     {
-        if(session()->missing('success')) {
+        if(session()->missing('ok')) {
           return  redirect("/");
         } else 
         return $next($request);
