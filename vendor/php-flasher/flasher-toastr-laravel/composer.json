@@ -1,0 +1,44 @@
+{
+    "name": "php-flasher/flasher-toastr-laravel",
+    "description": "PHP Flasher Laravel adapter for Toastr",
+    "type": "library",
+    "keywords": ["yoeunes", "notify", "php", "laravel", "symfony", "Lumen", "notifications", "messages", "alerts", "pnotify", "toastr ", "bundle", "flex"],
+    "homepage": "https://php-flasher.io",
+    "authors": [
+        {
+            "name": "Younes KHOUBZA",
+            "email": "younes.khoubza@gmail.com",
+            "homepage": "https://www.linkedin.com/in/younes-khoubza",
+            "role": "Developer"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.3",
+        "php-flasher/flasher-laravel": "^1.6",
+        "php-flasher/flasher-toastr": "^1.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Flasher\\Toastr\\Laravel\\": ""
+        },
+        "files": [
+            "toastr.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Flasher\\Toastr\\Laravel\\FlasherToastrServiceProvider"
+            ],
+            "aliases": {
+                "Toastr": "Flasher\\Toastr\\Laravel\\Facade\\Toastr"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
