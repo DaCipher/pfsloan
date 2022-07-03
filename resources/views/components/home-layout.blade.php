@@ -99,8 +99,8 @@
                     <div class="col-lg-4 col-md-6 footer-contact">
                         <h3><span class="main-color">PF</span> SOLUTIONS</h3>
                         <p>
-                            16 Washington Mewst, <br>
-                            New York, NY 10003,<br>
+                            6123 Sunrise Blvd, <br>
+                            Citrus Heights CA 95610,<br>
                             United States <br><br>
                             <strong>Phone:</strong> +1 909 352 0381<br>
                             <strong>Email:</strong><span style="cursor:pointer" onclick="window.location.href='mailto:info@primefinancialsolution.com'"> info@primefinancialsolution.com</span><br>
