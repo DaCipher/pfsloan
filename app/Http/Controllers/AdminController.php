@@ -33,7 +33,7 @@ class AdminController extends Controller
 
    public function viewApplications()
    {
-      $applications = Application::orderByDesc('created_at')->paginate(4);
+      $applications = Application::orderByDesc('created_at')->paginate(10);
 
       return view('admin.applications', ['applications' => $applications]);
    }
@@ -84,21 +84,21 @@ class AdminController extends Controller
 
    public function deleteAdmin(Request $request)
    {
-       if(auth()->user()->role === 'super_admin') {
-          User::destroy($request->input('id'));
-      return redirect()->back()->with('success', "Admin user deleted.");
-       } else {
+      if (auth()->user()->role === 'super_admin') {
+         User::destroy($request->input('id'));
+         return redirect()->back()->with('success', "Admin user deleted.");
+      } else {
          abort(404);
-       }
-     
+      }
    }
 
    public function showProfile()
    {
 
-      $id = auth()->id();
+      $id = auth()->user()->id;
 
-      $profile = User::findOrFail($id);
+
+      $profile = User::findOrFail($id)->first();
 
       return view('admin.profile', ['profile' => $profile]);
    }

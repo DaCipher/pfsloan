@@ -32,20 +32,20 @@ class UpdateAdmin extends Component
         'password_confirm.required' => 'Password confirmation is required.',
         'password_confirm.same' => 'Passwords do not match.'
     ];
-public function __construct()
-{
-    if(auth()->user()->role !== 'super_admin') {
-        abort(404);
+    public function __construct()
+    {
+        if (auth()->user()->role !== 'super_admin') {
+            abort(404);
+        }
     }
-}
 
     public function validateData()
     {
         $this->validate([
             'first_name' => 'required|string|min:4',
             'last_name' => 'required|string',
-            'email' => 'required|email|min:4|unique:users,email',
-            'username' => 'required|min:4|unique:users,username'
+            'email' => 'required|email|min:4',
+            'username' => 'required|min:4'
         ]);
     }
 
@@ -54,13 +54,13 @@ public function __construct()
         $this->username = strtolower($this->username);
 
         $this->validateData();
-        $admin = User::find($this->admin_id)->first();
-        $admin->firstname = $this->first_name;
-        $admin->lastname = $this->last_name;
-        $admin->email = $this->email;
-        $admin->username = strtolower($this->username);
+        $admin = User::where('id', $this->admin_id)->update([
+            'firstname' => $this->first_name,
+            'lastname' => $this->last_name,
+            'email' => $this->email,
+            'username' => strtolower($this->username)
+        ]);
 
-        $admin->save();
 
         redirect()->route('admins')->with('success', "Admin Details Updated!");
     }
@@ -108,25 +108,25 @@ public function __construct()
 
     public function createAdmin()
     {
-       $this->validate([
+        $this->validate([
             'first_name' => 'required|string|min:4',
             'last_name' => 'required|string',
             'email' => 'required|email|min:4|unique:users,email',
             'username' => 'required|min:4|unique:users,username',
             'password' => 'required|min:8',
             'password_confirm' =>  'required|same:password',
-       ]);
+        ]);
 
-       $data = [
+        $data = [
             'firstname' => $this->first_name,
             'lastname' => $this->last_name,
             'email' => $this->email,
             'username' => strtolower($this->username),
             'password' => Hash::make($this->password, ['rounds' => 12]),
             'role' => 'admin'
-       ];
+        ];
 
-       User::create($data);
+        User::create($data);
 
         redirect()->route('admins')->with('success', "Admin profile created!");
     }

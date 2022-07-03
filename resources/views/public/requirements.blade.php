@@ -156,7 +156,7 @@
                                         <img src="{{ asset('/img/flat/bank-statement.png') }}" alt="" class="img-fluid">
                                     </div>
                                     <div class="mt-3">
-                                        <p style=" font-weight: bold">Current Uility Bill</p>
+                                        <p style=" font-weight: bold">Current Utility Bill</p>
                                     </div>
                                 </div>
 

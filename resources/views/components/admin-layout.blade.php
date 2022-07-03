@@ -55,8 +55,8 @@
             <ul class="d-flex align-items-center">
 
                 <li class="nav-item dropdown pe-3">
-
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                        <i class='bx bxs-user-circle fs-1'></i>
                         <span class="d-none d-md-block dropdown-toggle ps-2">{{ ucfirst(auth()->user()->firstname) }}</span>
                     </a><!-- End Profile Iamge Icon -->
 
@@ -151,7 +151,7 @@
                     </li>
                 </ul>
             </li>
-           
+
             <!-- End Accounts Nav -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="{{ route('site-settings') }}">

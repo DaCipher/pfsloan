@@ -20,7 +20,7 @@
 
                     <div class="row">
                         <!-- Recent Apllications -->
-                        <div class="col-10">
+                        <div class="col-12">
                             <div class="card recent-sales overflow-auto">
 
                                 <div class="card-body">

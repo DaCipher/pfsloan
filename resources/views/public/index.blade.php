@@ -64,8 +64,8 @@
 
                 <div class="row content">
                     <div class="col-lg-6" data-aos="fade-right">
-                        <h2>We are here to meet your financial needs</h2>
-                        <h3>We are committed to providing consumer credit to our target market in the most efficient and convenient manner while ensuring best practices.</h3>
+                        <h3 style="text-transform:uppercase;" class="main-color">We are here to meet your financial needs</h3>
+                        <h4>We are committed to providing consumer credit to our target market in the most efficient and convenient manner while ensuring best practices.</h4>
                     </div>
                     <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left">
                         <p>
@@ -131,7 +131,7 @@
                     </div>
 
                     <div class=" my-5 d-flex justify-content-center">
-                        <div class="text-center"><a href="{{ route('services')}}" class="btn btn-learn-more btn-get-started" style="color:#1bbd36;">Read More</a></div>
+                        <div class="text-center"><a href="{{ route('services')}}" class="btn btn-learn-more btn-get-started main-bg">Read More</a></div>
                     </div>
 
                 </div>
