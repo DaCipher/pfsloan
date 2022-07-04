@@ -14,7 +14,6 @@
         <section class="section dashboard">
             <div class="bs-canvas-overlay bs-canvas-anim bg-dark position-fixed w-100 h-100"></div>
             <div class="row">
-
                 <!-- Left side columns -->
                 <div class="col-lg-12">
                     <!-- Details Side bar  -->
