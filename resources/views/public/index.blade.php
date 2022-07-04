@@ -140,7 +140,118 @@
                 </div>
             </div>
         </section><!-- End Services Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-title aos-init aos-animate" data-aos="fade-up">
+                    <h3>A Tested and Trusted Direct Lender</h3>
+                    <hr class="mx-auto color-primary" style="width: 5%;">
+                    <p>We offers loans to qualified borrowers completely online and through the electronic banking
+                        system. <br> Our process is so fast and simple you could have your funds within a few hours. The
+                        nice thing about
+                        our online loans is that you can use your funds for any reason:</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 mb-5 mb-lg-0 aos-init aos-animate" data-aos="fade-right">
+                        <ul class="nav nav-tabs flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link show active" data-bs-toggle="tab" href="#tab-1">
+                                    <h4>Consolidate debts</h4>
+                                    <p>Enjoy our low interest rate and low monthly payment.</p>
+                                </a>
+                            </li>
+                            <li class="nav-item mt-2">
+                                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
+                                    <h4>Eliminate bank fees</h4>
+                                    <p>We offer our services with zero charges..</p>
+                                </a>
+                            </li>
+                            <li class="nav-item mt-2">
+                                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">
+                                    <h4>Cover an unexpected expense</h4>
+                                    <p>Unplanned expenses? We got you covered!.</p>
+                                </a>
+                            </li>
+                            <li class="nav-item mt-2">
+                                <a class="nav-link" data-bs-toggle="tab" href="#tab-4">
+                                    <h4>Take a vacation</h4>
+                                    <p>You have a city of your dreams? Let's help you actualise your dream.</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 ml-auto aos-init aos-animate" data-aos="fade-left">
+                        <div class="tab-content">
+                            <div class="tab-pane show active" id="tab-1">
+                                <figure>
+                                    <img src="{{ asset('img/features/features-1.png')  }}" alt="" class="img-fluid">
+                                </figure>
+                            </div>
+                            <div class="tab-pane" id="tab-2">
+                                <figure>
+                                    <img src="{{ asset('img/features/features-2.png')  }}" alt="" class="img-fluid">
+                                </figure>
+                            </div>
+                            <div class="tab-pane" id="tab-3">
+                                <figure>
+                                    <img src="{{ asset('img/features/features-3.png')  }}" alt="" class="img-fluid">
+                                </figure>
+                            </div>
+                            <div class="tab-pane" id="tab-4">
+                                <figure>
+                                    <img src="{{ asset('img/features/features-4.png')  }}" alt="" class="img-fluid">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+            </div>
+        </section>
+        <section id="services" class="services section-bg">
+            <div class="container">
+
+                <div class="row no-gutters">
+
+                    <div class="col-lg-4 col-md-6 content-item aos-init aos-animate" data-aos="fade-in">
+                        <span>01</span>
+                        <h4>Bad Credit OK</h4>
+                        <p>Emphasis on most recent credit history allows us to offer you a bad credit loan</p>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 content-item aos-init aos-animate" data-aos="fade-in" data-aos-delay="100">
+                        <span>02</span>
+                        <h4>No Origination Fee</h4>
+                        <p>The amount you borrow is the amount we deposit in your account</p>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 content-item aos-init aos-animate" data-aos="fade-in" data-aos-delay="200">
+                        <span>03</span>
+                        <h4>Safe &amp; Secure</h4>
+                        <p>Same security technology as online banking 256-bit SSL encryption</p>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 content-item aos-init aos-animate" data-aos="fade-in" data-aos-delay="300">
+                        <span>04</span>
+                        <h4>Mobile Friendly</h4>
+                        <p>Complete loan process can be completed on a mobile device</p>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 content-item aos-init aos-animate" data-aos="fade-in" data-aos-delay="400">
+                        <span>05</span>
+                        <h4>No Pre-payment Penalty</h4>
+                        <p>You only pay for the time you have the loan outstanding</p>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 content-item aos-init aos-animate" data-aos="fade-in" data-aos-delay="500">
+                        <span>06</span>
+                        <h4>20 Years Lending Experience</h4>
+                        <p>Providing top rate service built on customer referrals</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
         <section id="application" class="application">
             <div class="container">
 

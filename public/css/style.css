@@ -8,6 +8,7 @@
 # General
 --------------------------------------------------------------*/
     
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:ital,wght@0,300;0,400;0,500;1,300&display=swap');
     body {
         font-family: "Open Sans", sans-serif;
         color: #4d4643;
@@ -33,7 +34,7 @@
     h4,
     h5,
     h6 {
-        font-family: "Roboto", sans-serif;
+        font-family: 'Raleway', sans-serif;
     }
     /*--------------------------------------------------------------
 # FAQ Page
@@ -587,6 +588,65 @@
         }
     }
     /*--------------------------------------------------------------
+# Features
+--------------------------------------------------------------*/
+    
+    .features .nav-tabs {
+        border: 0;
+    }
+    
+    .features .nav-link {
+        border: 0;
+        padding: 20px;
+        transition: 0.3s;
+        color: #21413c;
+    }
+    
+    .features .nav-link:hover {
+        color: #012970;
+    }
+    
+    .features .nav-link h4 {
+        font-size: 18px;
+        font-weight: 600;
+    }
+    
+    .features .nav-link p {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+    
+    .features .nav-link.active {
+        box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.12);
+    }
+    
+    .features .nav-link.active h4 {
+        color: #012970;
+    }
+    
+    .features .tab-pane.active {
+        -webkit-animation: slide-down 0.5s ease-out;
+        animation: slide-down 0.5s ease-out;
+    }
+    
+    @-webkit-keyframes slide-down {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    @keyframes slide-down {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
     
@@ -596,7 +656,8 @@
     }
     
     .section-bg {
-        background-color: #f7f7f7;
+        /* background-color: #f7f7f7; */
+        background-color: #ebebeb;
     }
     
     .section-title {
@@ -815,6 +876,52 @@
         fill: #11dbcf;
     }
     /*--------------------------------------------------------------
+# services
+--------------------------------------------------------------*/
+    
+    .services {
+        padding: 50px 0 40px 0;
+    }
+    
+    .services .row {
+        overflow: hidden;
+    }
+    
+    .services .content-item {
+        padding: 40px;
+        border-left: 1px solid #ebebeb;
+        border-bottom: 1px solid #ebebeb;
+        margin: -1px;
+    }
+    
+    .services .content-item span {
+        display: block;
+        font-size: 24px;
+        font-weight: 400;
+        color: #012970;
+    }
+    
+    .services .content-item h4 {
+        font-size: 28px;
+        font-weight: 400;
+        padding: 0;
+        margin: 20px 0;
+        color: #21413c;
+    }
+    
+    .services .content-item p {
+        color: #aaaaaa;
+        font-size: 15px;
+        margin: 0;
+        padding: 0;
+    }
+    
+    @media (max-width: 768px) {
+        .services .content-item {
+            padding: 40px 20px;
+        }
+    }
+    /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
     
@@ -1027,6 +1134,10 @@
         line-height: 60px;
         margin-bottom: 20px;
         text-transform: uppercase;
+    }
+    
+    .about-us .content h4 {
+        font-family: 'Poppins', sans-serif;
     }
     
     .about-us .content h3 {
