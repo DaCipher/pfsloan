@@ -21,29 +21,35 @@
                                     <div class="row">
                                         <div class="row">
                                             <div class="col-12 mb-4">
-                                                <input style="border-radius: 15px;" type="number" wire:model.lazy="loan_amount" id="loan_amount" class="form-control" placeholder="Loan Amount*">
-                                                <span class="text-danger">
-                                                    @error('loan_amount')
+                                                <input style="border-radius: 15px;" type="number" wire:model.lazy="loan_amount" id="loan_amount" class="form-control  @error('loan_amount') is-invalid @enderror" placeholder="Loan Amount*">
+
+                                                @error('loan_amount')
+                                                <span class="ms-3 invalid-feedback">
                                                     {{ $message }}
-                                                    @enderror
                                                 </span>
+                                                @enderror
+
                                             </div>
 
                                             <div class="col-12 mb-4">
-                                                <input style="border-radius: 15px;" type="text" wire:model.lazy="loan_purpose" id="loan_purpose" class="form-control" placeholder="Loan Purpose*">
-                                                <span class="text-danger">
-                                                    @error('loan_purpose')
+                                                <input style="border-radius: 15px;" type="text" wire:model.lazy="loan_purpose" id="loan_purpose" class="form-control  @error('loan_purpose')  is-invalid  @enderror" placeholder="Loan Purpose*">
+
+                                                @error('loan_purpose')
+                                                <span class="ms-3 invalid-feedback">
                                                     {{ $message }}
-                                                    @enderror
                                                 </span>
+                                                @enderror
+
                                             </div>
                                             <div class="col-12 mb-4">
-                                                <input style="border-radius: 15px;" type="number" wire:model.lazy="loan_duration" id="loan_duration" class="form-control" placeholder="Loan Duration (in Months)*">
-                                                <span class="text-danger">
-                                                    @error('loan_duration')
+                                                <input style="border-radius: 15px;" type="number" wire:model.lazy="loan_duration" id="loan_duration" class="form-control  @error('loan_duration') is-invalid @enderror" placeholder="Loan Duration (in Months)*">
+
+                                                @error('loan_duration')
+                                                <span class="ms-3 invalid-feedback">
                                                     {{ $message }}
-                                                    @enderror
                                                 </span>
+                                                @enderror
+
                                             </div>
                                         </div>
                                     </div>
@@ -65,52 +71,61 @@
                                 <div class="rounded">
                                     <div class="row">
                                         <div class="col-12 mb-4">
-                                            <input style="border-radius: 15px;" type="text" wire:model.lazy="first_name" id="firstname" class="form-control" placeholder="First Name*">
-                                            <span class="text-danger">
-                                                @error('first_name')
+                                            <input style="border-radius: 15px;" type="text" wire:model.lazy="first_name" id="firstname" class="form-control  @error('first_name') is-invalid @enderror" placeholder="First Name*">
+
+                                            @error('first_name')
+                                            <span class="ms-3 invalid-feedback">
                                                 {{ $message }}
-                                                @enderror
                                             </span>
+                                            @enderror
                                         </div>
                                         <div class="col-12 mb-4">
-                                            <input style="border-radius: 15px;" type="text" wire:model.lazy="middle_name" id="middlename" class="form-control" placeholder="Middle Name*">
-                                            <span class="text-danger">
-                                                @error('middle_name')
+                                            <input style="border-radius: 15px;" type="text" wire:model.lazy="middle_name" id="middlename" class="form-control  @error('middle_name')is-invalid @enderror" placeholder="Middle Name*">
+
+                                            @error('middle_name')
+                                            <span class="ms-3 invalid-feedback">
                                                 {{ $message }}
-                                                @enderror
                                             </span>
+                                            @enderror
+
                                         </div>
                                         <div class="col-12 mb-4">
-                                            <input style="border-radius: 15px;" type="text" wire:model.lazy="last_name" id="lastname" class="form-control" placeholder="Last Name*">
-                                            <span class="text-danger">
-                                                @error('last_name')
+                                            <input style="border-radius: 15px;" type="text" wire:model.lazy="last_name" id="lastname" class="form-control  @error('last_name') is-invalid @enderror" placeholder="Last Name*">
+
+                                            @error('last_name')
+                                            <span class="ms-3 invalid-feedback">
                                                 {{ $message }}
-                                                @enderror
                                             </span>
+                                            @enderror
                                         </div>
                                         <div class="col-12 mb-4">
-                                            <input style="border-radius: 15px;" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" wire:model.lazy="dob" id="dob" class="form-control" placeholder="Date of Birth: DD/MM/YYYY" maxlength="10">
-                                            <span class="text-danger">
+                                            <input style="border-radius: 15px;" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" wire:model.lazy="dob" id="dob" class="form-control  @error('dob') is-invalid @enderror" placeholder="Date of Birth: DD/MM/YYYY" maxlength="10">
+                                          
                                                 @error('dob')
-                                                {{ $message }}
+                                                <span class="ms-3 invalid-feedback">
+                                                    {{ $message }}
+                                                </span>
                                                 @enderror
-                                            </span>
                                         </div>
                                         <div class="col-12 mb-4">
-                                            <input style="border-radius: 15px;" type="text" wire:model.lazy="phone" id="phone" class="form-control" placeholder="Phone Number +1(215) 243-3344" maxlength="17">
-                                            <span class="text-danger">
-                                                @error('phone')
+                                            <input style="border-radius: 15px;" type="text" wire:model.lazy="phone" id="phone" class="form-control  @error('phone') is-invalid @enderror" placeholder="Phone Number +1(215) 243-3344" maxlength="17">
+
+                                            @error('phone')
+                                            <span class="ms-3 invalid-feedback">
                                                 {{ $message }}
-                                                @enderror
                                             </span>
+                                            @enderror
+
                                         </div>
                                         <div class="col-12 mb-4">
-                                            <input style="border-radius: 15px;" type="email" wire:model.lazy="email" id="email" class="form-control" placeholder="Email*">
-                                            <span class="text-danger">
-                                                @error('email')
+                                            <input style="border-radius: 15px;" type="email" wire:model.lazy="email" id="email" class="form-control  @error('email') is-invalid @enderror" placeholder="Email*">
+
+                                            @error('email')
+                                            <span class="ms-3 invalid-feedback">
                                                 {{ $message }}
-                                                @enderror
                                             </span>
+                                            @enderror
+
                                         </div>
                                     </div>
 
@@ -134,38 +149,46 @@
 
                                     <div class="row">
                                         <div class="col-12 mb-4">
-                                            <input style="border-radius: 15px;" type="text" wire:model.lazy="address" id="address" class="form-control" placeholder="Street Address*">
-                                            <span class="text-danger">
-                                                @error('address')
+                                            <input style="border-radius: 15px;" type="text" wire:model.lazy="address" id="address" class="form-control  @error('address') is-invalid @enderror" placeholder="Street Address*">
+
+                                            @error('address')
+                                            <span class="ms-3 invalid-feedback">
                                                 {{ $message }}
-                                                @enderror
                                             </span>
+                                            @enderror
+
                                         </div>
                                         <div class="col-12 mb-4">
-                                            <input style="border-radius: 15px;" type="text" wire:model.lazy="zip" id="zip" class="form-control" placeholder="ZIP*">
-                                            <span class="text-danger">
-                                                @error('zip')
+                                            <input style="border-radius: 15px;" type="text" wire:model.lazy="zip" id="zip" class="form-control  @error('zip') is-invalid @enderror" placeholder="ZIP*">
+
+                                            @error('zip')
+                                            <span class="ms-3 invalid-feedback">
                                                 {{ $message }}
-                                                @enderror
                                             </span>
+                                            @enderror
+
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-12 mb-4">
-                                            <input style="border-radius: 15px;" type="text" wire:model.lazy="state" id="state" class="form-control" placeholder="State*">
-                                            <span class="text-danger">
-                                                @error('state')
+                                            <input style="border-radius: 15px;" type="text" wire:model.lazy="state" id="state" class="form-control  @error('state') is-invalid @enderror" placeholder="State*">
+
+                                            @error('state')
+                                            <span class="ms-3 invalid-feedback">
                                                 {{ $message }}
-                                                @enderror
                                             </span>
+                                            @enderror
+
                                         </div>
                                         <div class="col-12 mb-4">
-                                            <input style="border-radius: 15px;" type="text" wire:model.lazy="city" id="city" class="form-control" placeholder="City*">
-                                            <span class="text-danger">
-                                                @error('city')
+                                            <input style="border-radius: 15px;" type="text" wire:model.lazy="city" id="city" class="form-control  @error('city') is-invslid @enderror" placeholder="City*">
+
+                                            @error('city')
+                                            <span class="ms-3 invalid-feedback">
                                                 {{ $message }}
-                                                @enderror
                                             </span>
+                                            @enderror
+
                                         </div>
                                     </div>
                                 </div>
@@ -187,15 +210,17 @@
                                     <div class="row">
                                         <div class="row">
                                             <div class="col-12 mb-4">
-                                                <input style="border-radius: 15px;" type="text" wire:model.lazy="employer" id="employer" class="form-control" placeholder="Employer Name">
-                                                <span class="text-danger">
+                                                <input style="border-radius: 15px;" type="text" wire:model.lazy="employer" id="employer" class="form-control  @error('employer') is-invalid @enderror" placeholder="Employer Name">
+                                             
                                                     @error('employer')
-                                                    {{ $message }}
+                                                    <span class="ms-3 invalid-feedback">
+                                                        {{ $message }}
+                                                    </span>
                                                     @enderror
-                                                </span>
+                                             
                                             </div>
                                             <div class="col-12 mb-4">
-                                                <select style="border-radius: 15px;" wire:model.lazy="employment_type" id="employment_type" class="form-control">
+                                                <select style="border-radius: 15px;" wire:model.lazy="employment_type" id="employment_type" class="form-control  @error('employment_type') is-invalid @enderror">
                                                     <option value="">--- Select Employer Type ---</option>
                                                     <option value="Self">Self Employed</option>
                                                     <option value="fulltime">Full Time</option>
@@ -203,19 +228,22 @@
                                                     <option value="contract"> Contract</option>
                                                     <option value="casual">Casual</option>
                                                 </select>
-                                                <span class="text-danger">
+                                             
                                                     @error('employment_type')
-                                                    {{ $message }}
+                                                    <span class="ms-3 invalid-feedback">
+                                                        {{ $message }}
+                                                    </span>
                                                     @enderror
-                                                </span>
+                                            
                                             </div>
                                             <div class="col-12 mb-4">
-                                                <input style="border-radius: 15px;" type="number" wire:model.lazy="income" id="income" class="form-control" placeholder="Individual Annual Income*">
-                                                <span class="text-danger d-block">
+                                                <input style="border-radius: 15px;" type="number" wire:model.lazy="income" id="income" class="form-control  @error('income') is-invalid @enderror" placeholder="Individual Annual Income*">
+                                               
                                                     @error('income')
-                                                    {{ $message }}
+                                                    <span class="ms-3 invalid-feedback d-block">
+                                                        {{ $message }}
+                                                    </span>
                                                     @enderror
-                                                </span>
                                                 <span class="help-block" style="font-size: 0.7rem;"> Our minimum
                                                     individual annual
                                                     income is $3,000. Alimony, child support, or separate
@@ -226,12 +254,14 @@
                                                 </span>
                                             </div>
                                             <div class="col-12 mb-4">
-                                                <input style="border-radius: 15px;" type="text" wire:model.lazy="ssn" id="ssn" class="form-control" placeholder="Social Security Number*" maxlength="11">
-                                                <span class="text-danger">
-                                                    @error('ssn')
+                                                <input style="border-radius: 15px;" type="text" wire:model.lazy="ssn" id="ssn" class="form-control  @error('ssn') is-invalid @enderror" placeholder="Social Security Number*" maxlength="11">
+
+                                                @error('ssn')
+                                                <span class="ms-3 invalid-feedback">
                                                     {{ $message }}
-                                                    @enderror
                                                 </span>
+                                                @enderror
+
                                             </div>
                                         </div>
 
@@ -244,7 +274,7 @@
 
                     <!-- Buttons  -->
                     <div class="card mt-3 border-0">
-                        <div class="card-footer border-0 d-flex justify-content-between">
+                        <div class="card-footer bg-transparent border-0 d-flex justify-content-between">
                             @if ($currentStep == 1)
                             <div></div>
                             @endif

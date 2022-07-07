@@ -49,9 +49,9 @@
     <header id="header" class="fixed-top">
         <div class="container d-flex align-items-center">
 
-            <h1 class="logo me-auto"><a href="/"><span>PF </span>Solution</a></h1>
+            <!-- <h1 class="logo me-auto"><a href="/"><span>PF </span>Solution</a></h1> -->
             <!-- Uncomment below if you prefer to use an image logo -->
-            <!-- <a href="/" class="logo me-auto me-lg-0"><img src="{{ asset('/img/logo.png') }}" alt="" class="img-fluid"></a>-->
+            <a href="/" class="logo me-auto me-lg-0"><img src="{{ asset('/img/logo.png') }}" alt="" class="img-fluid"></a>
 
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
@@ -79,8 +79,8 @@
             </nav>
 
             <!-- .navbar -->
-            <div class="header-social-links d-flex ml-2">
-                <a href="{{ route('application') }}" class="twitter px-3 btn">APPLY</i></a>
+            <div class="header-social-links d-flex ml-2 ms-md-auto">
+                <a href="{{ route('application') }}" class="twitter px-3 btn fw-bold" style="font-size: 13px;">APPLY</i></a>
 
             </div>
         </div>
@@ -97,11 +97,13 @@
                 <div class="row">
 
                     <div class="col-lg-4 col-md-6 footer-contact">
-                        <h3><span class="main-color">PF</span> SOLUTIONS</h3>
+
+                        <a href="/" class="logo me-auto me-lg-0 ms-4"><img src="{{ asset('/img/logo.png') }}" alt="" class="img-fluid" width="20%!important"></a>
+                        <h6><span class="main-color">PF</span> SOLUTIONS</h6>
                         <p>
                             6123 Sunrise Blvd, <br>
                             Citrus Heights CA 95610,<br>
-                            United States <br><br>
+                            United States <br>
                             <strong>Phone:</strong> +1 909 352 0381<br>
                             <strong>Email:</strong><span style="cursor:pointer" onclick="window.location.href='mailto:info@primefinancialsolution.com'"> info@primefinancialsolution.com</span><br>
                         </p>

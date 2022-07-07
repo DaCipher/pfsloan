@@ -39,7 +39,7 @@ class ApplicationForm extends Component
         "loan_amount.integer" => "Enter valid amount.",
         "dob.min" => "DOB must be in DD/MM/YYYY format.",
         "ssn.min" => "SSN must be in 111-11-1111 format.",
-        "dob.before" => "You must be above 18years!",
+        "dob.before" => "You must be above 18 years!",
         "loan_duration.min" => "Minimum loan duration is 2 months."
     ];
     public function mount()
