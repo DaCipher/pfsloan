@@ -181,7 +181,7 @@
 
                                         </div>
                                         <div class="col-12 mb-4">
-                                            <input style="border-radius: 15px;" type="text" wire:model.lazy="city" id="city" class="form-control  @error('city') is-invslid @enderror" placeholder="City*">
+                                            <input style="border-radius: 15px;" type="text" wire:model.lazy="city" id="city" class="form-control  @error('city') is-invalid @enderror" placeholder="City*">
 
                                             @error('city')
                                             <span class="ms-3 invalid-feedback">

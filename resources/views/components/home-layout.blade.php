@@ -98,9 +98,9 @@
 
                     <div class="col-lg-4 col-md-6 footer-contact">
 
-                        <a href="/" class="logo me-auto me-lg-0 ms-4"><img src="{{ asset('/img/logo.png') }}" alt="" class="img-fluid" width="20%!important"></a>
-                        <h6><span class="main-color">PF</span> SOLUTIONS</h6>
-                        <p>
+                        <a href="/" class="logo me-auto me-lg-0"><img src="{{ asset('/img/logo_footer.png') }}" alt="" class="img-fluid" width="65%!important"></a>
+                        <!-- <h6><span class="main-color">PF</span> SOLUTIONS</h6> -->
+                        <p class="py-3">
                             6123 Sunrise Blvd, <br>
                             Citrus Heights CA 95610,<br>
                             United States <br>
